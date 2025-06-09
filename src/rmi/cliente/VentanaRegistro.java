@@ -21,7 +21,7 @@ public class VentanaRegistro extends JFrame {
         setResizable(false);
 
         try {
-            registro = (Registro) Naming.lookup("rmi://localhost:1099/registro");
+            registro = (Registro) Naming.lookup("rmi://192.168.56.1:1099/registro");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(this, "Error conectando al servidor RMI", "Error", JOptionPane.ERROR_MESSAGE);
             dispose();
